@@ -1,26 +1,41 @@
-body,
-p,
-th,
-td,
-div {
-  margin: 0;
+* {
   padding: 0;
+  margin: 0;
 }
-.content {
-  width: 100%;
-  margin: 100px;
+body {
+  background: #454545;
 }
-.content .select {
-  width: 50%;
-  float: left;
+/* Apply these styles only when #preview-pane has
+   been placed within the Jcrop widget */
+.jcrop-holder #preview-pane {
+  display: block;
+  position: absolute;
+  z-index: 2000;
+  top: 10px;
+  right: -320px;
+  padding: 6px;
+  border: 1px rgba(0, 0, 0, 0.4) solid;
+  background-color: white;
+  margin-top: 150px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
 }
-.content .select img {
-  width: 80%;
-  height: 400px;
+/* The Javascript code will set the aspect ratio of the crop
+   area based on the size of the thumbnail preview,
+   specified here */
+#preview-pane .preview-container {
+  width: 300px;
+  height: 220px;
   overflow: hidden;
-  margin: 0 auto;
 }
-.content .result {
-  width: 50%;
-  float: left;
+.btn {
+  margin: 20px 450px;
+  width: 200px;
+  height: 50px;
+  font-size: 22px;
+  background-color: white;
 }
